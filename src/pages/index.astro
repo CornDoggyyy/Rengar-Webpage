@@ -1,7 +1,10 @@
 ---
 import "../styles/global.css"
 import BaseLayout from "../layouts/BaseLayout.astro"
-
+import CharacterAnimation from "../components/CharacteranimationComponent.astro"
+import CharacteranimationComponent from "../components/CharacteranimationComponent.astro"
+import PlaynowvideoComponent from "../components/PlaynowvideoComponent.astro"
+import ActionbuttonComponent from "../components/ActionbuttonComponent.astro"
 ---
 
 <html lang="en">
@@ -13,10 +16,42 @@ import BaseLayout from "../layouts/BaseLayout.astro"
 		<title>Street Demon Rengar - League of Legends</title>
 	</head>
 	<body>
-		<BaseLayout />
-<p>yolooo</p>
+		<BaseLayout>
+			<header class="main-header">
+				<img src="src/assets/Rengar-Background.png" alt="Rengar Animation Background">
+				<div class="header-content">
+					<div class="header-animation">
+						<CharacteranimationComponent />
+					</div>
+					<div class="header-text">
+						<p><span class="small-title">STREET DEMON</span><br><span class="big-title">RENGAR</span></p>
+						<img class="header-divider" src="src/assets/divider.png" alt="divider">
+						<p><span class="small-text">NOW AVAILABLE</span></p>
+					</div>
+				</div>
+			</header>
+<section class="abilities-section">
+
+</section>
+
+<section class="splash-art-section">
+	<img src="src/assets/summonersrift.jpg" alt="summoners rift background">
+
+</section>
+
+<section class="faq-section">
 
 
+</section>
+
+<section class="playnow-section">
+	<PlaynowvideoComponent/>
+	<div class="playnow-btn">
+		<ActionbuttonComponent btnText="PLAY FOR FREE"/>
+	</div>
+</section>
+
+		</BaseLayout>
 	</body>
 </html>
 

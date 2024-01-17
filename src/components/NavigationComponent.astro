@@ -1,18 +1,22 @@
 ---
 import "../styles/global.css"
+import ActionButton from "../components/ActionbuttonComponent.astro"
 ---
 
 <nav>
-
-    <ul>
-        <li>    
-            <a href="#">CHAMPION</a>
-            <a href="#">ABILITIES</a>
-            <a href="#">SPLASH ART</a>
-            <a href="#">FAQ</a>
-        </li>
-
-    </ul>
-
+    <div class="nav-main-content">
+        <a href="#"><img src="src/assets/lol-logo.png" alt="League of Legends Logo"></a>
+        <ul>
+            <li>    
+                <a class="nav-links" href="#">CHAMPION</a>
+                <a class="nav-links" href="#">ABILITIES</a>
+                <a class="nav-links" href="#">SPLASH ART</a>
+                <a class="nav-links" href="#">FAQ</a>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-action-button">
+        <ActionButton btnText="PLAY NOW"/>
+    </div>
 
 </nav>

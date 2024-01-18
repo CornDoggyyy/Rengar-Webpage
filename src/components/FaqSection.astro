@@ -1,0 +1,94 @@
+---
+import "../styles/global.css";
+import { Image } from "astro:assets";
+import Arrow from "../assets/arrow-down.png";
+---
+
+<section class="faq-section">
+  <h2>FAQ</h2>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-title">
+        <div class="accordion-question">
+          <p>Is the skin free or does is cost money?</p>
+          <div class="accordion-arrow">
+            <Image src={Arrow} alt="arrow-down" class="accordion-arrow-icon" />
+          </div>
+        </div>
+      </div>
+      <div class="accordion-content"><p>The skin costs money.</p></div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">
+        <div class="accordion-question">
+          <p>Where do I buy the skin?</p>
+          <div class="accordion-arrow">
+            <Image src={Arrow} alt="arrow-down" class="accordion-arrow-icon" />
+          </div>
+        </div>
+      </div>
+      <div class="accordion-content">
+        <p>
+          You can buy the skin in the League of Legends skin store, within the
+          game-launcher.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">
+        <div class="accordion-question">
+          <p>Do I need the champion to buy the skin?</p>
+          <div class="accordion-arrow">
+            <Image src={Arrow} alt="arrow-down" class="accordion-arrow-icon" />
+          </div>
+        </div>
+      </div>
+      <div class="accordion-content">
+        <p>
+          Yes, you need to own the champion to unlock the skin buying process.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">
+        <div class="accordion-question">
+          <p>Do other players see the skin too?</p>
+          <div class="accordion-arrow">
+            <Image src={Arrow} alt="arrow-down" class="accordion-arrow-icon" />
+          </div>
+        </div>
+      </div>
+      <div class="accordion-content">
+        <p>
+          Yes, if you have equiped the skin in the champion selection screen, it
+          will be shown to other players in-game.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import $ from "jquery";
+
+  $(function () {
+    $(".accordion-title").on("click", function (a) {
+      a.preventDefault();
+      var $this = $(this);
+
+      if (!$this.hasClass("accordion-active")) {
+        $(".accordion-content").slideUp(400);
+        $(".accordion-title").removeClass("accordion-active");
+        $(".accordion-arrow").removeClass("accordion-rotate");
+      }
+
+      $this.toggleClass("accordion-active");
+      $this.next().slideToggle();
+      $(".accordion-arrow", this).toggleClass("accordion-rotate");
+    });
+  });
+</script>

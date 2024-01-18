@@ -12,6 +12,9 @@
   "dependencies": {
     "@astrojs/svelte": "^5.0.3",
     "astro": "^4.1.2",
-    "svelte": "^4.2.8"
+    "atropos": "^2.0.2",
+    "jquery": "^3.7.1",
+    "jquery-ui": "^1.13.2",
+    "svelte": "^4.2.9"
   }
 }

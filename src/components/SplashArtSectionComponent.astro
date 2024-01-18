@@ -1,0 +1,71 @@
+---
+import "../styles/global.css";
+import { Image } from "astro:assets";
+import Border from "../assets/blue-border-splash.png";
+import Rengar from "../assets/RengarSplash.png";
+import SplashBg from "../assets/Rengar-Background-light.png";
+---
+
+<section class="splash-art-section">
+  <!-- main Atropos container (required), add your custom class here -->
+  <div class="atropos my-atropos">
+    <div class="atropos-scale">
+      <div class="atropos-rotate">
+        <div class="atropos-inner">
+          <div class="border-splash-image">
+            <Image
+              src={SplashBg}
+              alt="Rengar"
+              class="splash-bg"
+              data-atropos-offset="-10"
+            />
+            <Image
+              src={Rengar}
+              alt="Rengar"
+              class="rengar"
+              data-atropos-offset="-5"
+            />
+            <Image
+              src={Border}
+              alt="border"
+              class="border"
+              data-atropos-offset="0"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="splash-text">
+    <h2>SPLASH ART</h2>
+    <p>
+      Get a fresh, new look in the loading screen after enabling the <br /> Street
+      Demon Rengar skin in the champion selection screen so you can <br /> show it
+      off.
+    </p>
+  </div>
+</section>
+
+<script>
+  import "atropos/css";
+
+  // import Atropos library
+  import Atropos from "atropos";
+  import { transitionEnabledOnThisPage } from "astro:transitions/client";
+
+  const myAtropos = Atropos({
+    el: ".my-atropos",
+    activeOffset: 150,
+    shadowScale: 1,
+    highlight: true,
+    onEnter() {
+      console.log("Enter");
+    },
+    onLeave() {
+      console.log("Leave");
+    },
+    onRotate(x, y) {
+      console.log("Rotate", x, y);
+    },
+  });
+</script>

@@ -1,57 +1,113 @@
 ---
-import "../styles/global.css"
-import BaseLayout from "../layouts/BaseLayout.astro"
-import CharacterAnimation from "../components/CharacteranimationComponent.astro"
-import CharacteranimationComponent from "../components/CharacteranimationComponent.astro"
-import PlaynowvideoComponent from "../components/PlaynowvideoComponent.astro"
-import ActionbuttonComponent from "../components/ActionbuttonComponent.astro"
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CharacterAnimation from "../components/CharacteranimationComponent.astro";
+import CharacteranimationComponent from "../components/CharacteranimationComponent.astro";
+import PlaynowvideoComponent from "../components/PlaynowvideoComponent.astro";
+import ActionbuttonComponent from "../components/ActionbuttonComponent.astro";
+import SplashArtSectionComponent from "../components/SplashArtSectionComponent.astro";
+import FaqSection from "../components/FaqSection.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Street Demon Rengar - League of Legends</title>
-	</head>
-	<body>
-		<BaseLayout>
-			<header class="main-header">
-				<img src="src/assets/Rengar-Background.png" alt="Rengar Animation Background">
-				<div class="header-content">
-					<div class="header-animation">
-						<CharacteranimationComponent />
-					</div>
-					<div class="header-text">
-						<p><span class="small-title">STREET DEMON</span><br><span class="big-title">RENGAR</span></p>
-						<img class="header-divider" src="src/assets/divider.png" alt="divider">
-						<p><span class="small-text">NOW AVAILABLE</span></p>
-					</div>
-				</div>
-			</header>
-<section class="abilities-section">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Street Demon Rengar - League of Legends</title>
+  </head>
+  <body>
+    <BaseLayout>
+      <header class="main-header">
+        <img
+          src="src/assets/Rengar-Background.png"
+          alt="Rengar Animation Background"
+        />
+        <div class="header-content">
+          <div class="header-animation">
+            <CharacteranimationComponent />
+          </div>
+          <div class="header-text">
+            <p>
+              <span class="small-title">STREET DEMON</span><br /><span
+                class="big-title">RENGAR</span
+              >
+            </p>
+            <img
+              class="header-divider"
+              src="src/assets/divider.png"
+              alt="divider"
+            />
+            <p><span class="small-text">NOW AVAILABLE</span></p>
+          </div>
+        </div>
+      </header>
+      <section class="abilities-section">
+        <div class="abilities-content">
+          <div class="abilities-text">
+            <h2>ABILITIES</h2>
+            <p>The skin overhauls how the abilities look, check them out.</p>
+            <div class="abilities-icons">
+              <button class="video-btn" data-src="src/assets/RengarP-clip.mp4"
+                ><img src="src/assets/RengarP.png" alt="P icon" /></button
+              >
+              <button class="video-btn" data-src="src/assets/RengarQ-clip.mp4"
+                ><img src="src/assets/RengarQ.png" alt="Q icon" /></button
+              >
+              <button class="video-btn" data-src="src/assets/RengarW-clip.mp4"
+                ><img src="src/assets/RengarW.png" alt="W icon" /></button
+              >
+              <button class="video-btn" data-src="src/assets/RengarE-clip.mp4"
+                ><img src="src/assets/RengarE.png" alt="E icon" /></button
+              >
+              <button class="video-btn" data-src="src/assets/RengarR-clip.mp4"
+                ><img src="src/assets/RengarR.png" alt="R icon" /></button
+              >
+            </div>
+          </div>
+          <div class="abilities-line">
+            <img class="line" src="src/assets/line.png" alt="line" />
+          </div>
+          <div class="abilities-video-container">
+            <video id="abilities-video" width="100%" height="100%" loop muted>
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
 
-</section>
+      <SplashArtSectionComponent />
 
-<section class="splash-art-section">
-	<img src="src/assets/summonersrift.jpg" alt="summoners rift background">
+      <FaqSection />
 
-</section>
+      <section class="playnow-section">
+        <PlaynowvideoComponent />
+        <div class="playnow-btn">
+          <ActionbuttonComponent btnText="PLAY FOR FREE" />
+        </div>
+      </section>
+    </BaseLayout>
 
-<section class="faq-section">
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get elements
+        const videoButtons = document.querySelectorAll(".video-btn");
+        const videoPlayer = document.getElementById(
+          "abilities-video"
+        ) as HTMLVideoElement;
+        // Add click event listener to each button
+        videoButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Get the video source from the data attribute
+            const videoSrc = button.getAttribute("data-src");
 
-
-</section>
-
-<section class="playnow-section">
-	<PlaynowvideoComponent/>
-	<div class="playnow-btn">
-		<ActionbuttonComponent btnText="PLAY FOR FREE"/>
-	</div>
-</section>
-
-		</BaseLayout>
-	</body>
+            // Set the video source and play
+            videoPlayer.src = videoSrc;
+            videoPlayer.play();
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
-

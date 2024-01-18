@@ -1,174 +1,346 @@
 @font-face {
-    font-family: BeaufortforLOL-bold;
-    src: url(BeaufortforLOL-Bold.ttf);
+  font-family: BeaufortforLOL-bold;
+  src: url(BeaufortforLOL-Bold.ttf);
 }
 
 @font-face {
-    font-family: BeaufortforLOL-light;
-    src: url(BeaufortforLOL-Light.ttf);
+  font-family: BeaufortforLOL-light;
+  src: url(BeaufortforLOL-Light.ttf);
 }
 
 @font-face {
-    font-family: BeaufortforLOL-medium;
-    src: url(BeaufortforLOL-Medium.ttf);
+  font-family: BeaufortforLOL-medium;
+  src: url(BeaufortforLOL-Medium.ttf);
 }
 
 @font-face {
-    font-family: BeaufortforLOL-regular;
-    src: url(BeaufortforLOL-Regular.ttf);
+  font-family: BeaufortforLOL-regular;
+  src: url(BeaufortforLOL-Regular.ttf);
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    font-family: "BeaufortforLOL-medium";
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "BeaufortforLOL-medium", sans-serif;
 }
 
-nav{
-    background-color: #111111;
-    border-bottom: solid 2px #1c1c1c;
-    padding: 1rem 3rem 1rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-nav img{
-    width: 7rem;
+::-webkit-scrollbar-thumb {
+  background: #888;
 }
 
-ul{
-    list-style-type: none;
+::-webkit-scrollbar-track {
+  background-color: #494949;
 }
 
-ul li a{
-    text-decoration: none;
-    color: white;
+nav {
+  background-color: #111111;
+  border-bottom: solid 2px #1c1c1c;
+  padding: 1rem 3rem 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nav-links{
-    margin-right: 1.5rem;
-
+nav img {
+  width: 7rem;
 }
 
-.nav-main-content{
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 2rem;
+ul {
+  list-style-type: none;
 }
 
-
-.action-button{
-    background-color: #111111;
-    border: solid 2px #D0A85C;
-    min-width: 6rem;
-    min-height: 2rem;
-    padding: 0.5rem;
-    color: white;
-    cursor: pointer;
+ul li a {
+  text-decoration: none;
+  color: white;
 }
 
-header{
-    width: 100%;
-    height: 85vh;
-    overflow: hidden;
-    position: relative;
-    
+.nav-links {
+  margin-right: 1.5rem;
 }
 
-.main-header img{
-    max-width: 100%;
+.nav-main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
-
-.header-content{
-    position: absolute;
-    z-index: 1;
-    top: 0%;
-    max-width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    
+.action-button {
+  background-color: #111111;
+  border: solid 2px #d0a85c;
+  min-width: 6rem;
+  min-height: 2rem;
+  padding: 0.5rem;
+  color: white;
+  cursor: pointer;
 }
 
-.header-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    width: 70%;
-    text-align: center;
-    margin-right: 8rem;
+button {
+  outline: none;
+  background: none;
+  border: none;
 }
 
-.header-animation{
-    max-width: 65%;
+header {
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  position: relative;
 }
 
-.small-title{
-font-family: BeaufortforLOL-light;
-font-size: 2rem;
-line-height: 20%;
+.main-header img {
+  max-width: 100%;
 }
 
-.big-title{
-font-weight: bolder;
-font-size: 7rem;
-line-height: 90%;
+.header-content {
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.header-divider{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 70%;
+  text-align: center;
+  margin-right: 8rem;
 }
 
-.small-text{
-font-family: BeaufortforLOL-light;
-
+.header-animation {
+  max-width: 65%;
 }
 
-.abilities-section{
-    height: 100vh;
-    background-color: #000913;
+.small-title {
+  font-family: BeaufortforLOL-light, sans-serif;
+  font-size: 2rem;
+  line-height: 20%;
 }
 
-.splash-art-section{
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+.big-title {
+  font-weight: bolder;
+  font-size: 7rem;
+  line-height: 90%;
 }
 
-.splash-art-section img{
-    width: 100%;
-    bottom: -35%;
-    position: absolute;
+.header-divider {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.faq-section{
-    height: 100vh;
+.small-text {
+  font-family: BeaufortforLOL-light, sans-serif;
 }
 
-.playnow-section{
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.abilities-section {
+  height: 100vh;
+  background-color: #000913;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.playnowvideo-container video{
-    object-fit: fill;
-    width: 100%;
-    top: -5%;
-    filter: brightness(80%);
+.abilities-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3rem;
 }
 
-.playnow-btn{
-    position: absolute;
+.abilities-text {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
 
+.abilities-text h2 {
+  font-size: 6.5rem;
+}
+
+.abilities-text p {
+  font-family: "BeaufortforLOL-regular";
+}
+
+.abilities-icons {
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+
+.abilities-icons button {
+  cursor: pointer;
+}
+
+.abilities-icons button:hover {
+  scale: 1.1;
+  transition: all 0.2s ease-out;
+}
+
+.abilities-video-container {
+  width: 900px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 4vh;
+  background-color: black;
+}
+
+.line {
+  height: auto;
+  width: 8rem;
+}
+
+.splash-art-section {
+  height: 100vh;
+  background-image: url("src/assets/summonersrift.jpg");
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.border-splash-image {
+  width: 276px;
+  height: 514px;
+}
+
+.border {
+  z-index: 1;
+  position: relative;
+}
+
+.rengar {
+  position: absolute;
+  top: -2rem;
+  right: -12rem;
+  z-index: 0;
+  width: 55rem;
+  height: auto;
+}
+
+.splash-bg {
+  position: absolute;
+  width: 70rem;
+  height: auto;
+  left: -10rem;
+  top: -5rem;
+}
+
+.splash-text {
+  color: white;
+}
+
+.splash-text h2 {
+  font-size: 6.5rem;
+}
+
+.splash-text p {
+  font-family: "BeaufortforLOL-regular";
+}
+
+.playnow-section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playnowvideo-container video {
+  object-fit: fill;
+  width: 100%;
+  top: -5%;
+  filter: brightness(80%);
+}
+
+.playnow-btn {
+  position: absolute;
+}
+
+.faq-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq-section h2 {
+  font-size: 6.5rem;
+  margin-bottom: 2rem;
+}
+
+.accordion-item {
+  display: flex;
+  flex-direction: column;
+}
+.accordion-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  color: black;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  width: 50rem;
+  border-bottom: solid #d0a85c;
+}
+.accordion-title:hover {
+  background-color: #e5e4e4;
+  transition: all 0.5s ease-out;
+}
+
+.accordion-question {
+  display: flex;
+  align-items: center;
+  gap: 25rem;
+}
+
+.accordion-active {
+  background-color: #fafafa;
+}
+.accordion-arrow {
+  position: absolute;
+  right: 4rem;
+  width: 1rem;
+  height: auto;
+  text-align: center;
+  transition: all 0.2s ease-out;
+  transform-origin: center center;
+}
+
+.accordion-arrow-icon {
+  width: 1rem;
+  height: auto;
+}
+
+.accordion-rotate {
+  transform: rotate(180deg);
+}
+.accordion-content {
+  padding: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  display: none;
+  background-color: #ffffff;
+}
+.accordion-arrow-item {
+  font-weight: 700;
+  color: #d0a85c;
 }

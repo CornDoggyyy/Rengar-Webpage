@@ -90,13 +90,15 @@ import FaqSection from "../components/FaqSection.astro";
     </BaseLayout>
 
     <script>
+      // Wait for the DOM to be fully loaded before executing the code
       document.addEventListener("DOMContentLoaded", function () {
-        // Get elements
+        // Get elements from the DOM
         const videoButtons = document.querySelectorAll(".video-btn");
         const videoPlayer = document.getElementById(
           "abilities-video"
         ) as HTMLVideoElement;
-        // Add click event listener to each button
+
+        // Add a click event listener to each button
         videoButtons.forEach((button) => {
           button.addEventListener("click", function () {
             // Get the video source from the data attribute

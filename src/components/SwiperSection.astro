@@ -1,0 +1,73 @@
+---
+import "../styles/global.css";
+import { Image } from "astro:assets";
+import RengarGuardian from "../assets/rengar-guardian.jpg";
+import RengarHeadhunter from "../assets/rengar-headhunter.jpg";
+import RengarMecha from "../assets/rengar-mecha.jpg";
+import RengarNighthunter from "../assets/rengar-nighthunter.jpg";
+import RengarSentinal from "../assets/rengar-sentinel.jpg";
+import ActionButton from "../components/ActionbuttonComponent.astro";
+---
+
+<section class="swiper-section">
+  <div class="swiper">
+    <div class="swiper-title">
+      <div class="swiper-text">
+        <h2>MORE SKINS</h2>
+      </div>
+    </div>
+    <div class="swiper-action-button">
+      <ActionButton btnText="SKIN STORE" />
+    </div>
+
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <Image src={RengarGuardian} alt="rengar skin 1" class="swiper-image" />
+      </div>
+      <div class="swiper-slide">
+        <Image
+          src={RengarHeadhunter}
+          alt="rengar skin 2"
+          class="swiper-image"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Image src={RengarMecha} alt="rengar skin 3" class="swiper-image" />
+      </div>
+      <div class="swiper-slide">
+        <Image
+          src={RengarNighthunter}
+          alt="rengar skin 4"
+          class="swiper-image"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Image src={RengarSentinal} alt="rengar skin 5" class="swiper-image" />
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<script>
+  import Swiper from "swiper/bundle";
+  import "swiper/css/bundle";
+
+  // ---------- Swiper Init -------------
+
+  const swiper = new Swiper(".swiper", {
+    direction: "horizontal",
+    slidesPerView: 1,
+    loop: true,
+
+    autoplay: {
+      delay: 3200,
+      disableOnInteraction: false,
+    },
+
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
+  });
+</script>
